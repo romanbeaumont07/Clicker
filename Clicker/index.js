@@ -6,17 +6,16 @@ if(ClickCount == null){
 };
 localStorage.getItem('TwoTimesUpgrade')
 var TwoTimesUpgrade = localStorage.getItem('TwoTimesUpgrade');
-if(TwoTimesUpgrade == null) {
+if(TwoTimesUpgrade == "null") {
     TwoTimesUpgrade = false;
     localStorage.setItem('TwoTimesUpgrade', TwoTimesUpgrade);
 };
 document.getElementById("Clicker").addEventListener("click", function(){
-    if(TwoTimesUpgrade == false) {
+    if(TwoTimesUpgrade == "false") {
     ClickCount++;
     document.getElementById("ClickAmount").innerHTML = ClickCount;
     localStorage.setItem('ClickCount', ClickCount);
-    }
-    if(TwoTimesUpgrade == true) {
+    }else {
         ClickCount = ClickCount + 2;
         document.getElementById("ClickAmount").innerHTML = ClickCount;
         localStorage.setItem('ClickCount', ClickCount);
