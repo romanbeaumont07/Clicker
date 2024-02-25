@@ -1,0 +1,35 @@
+.LabelDiv {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+
+.ClickLabel {
+    font-size: 50px;
+}
+
+#Clicker:hover {
+    background-color: lightgray;
+}
+
+#Clicker:active {
+    height: 250px;
+    width: 250px;
+    font-size: 50px;
+    
+}
+
+#Clicker {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    font-size: 40px;
+    font-weight: 200;
+}
+
+.ButtonDiv {
+    position: absolute;
+    left: 50%;
+    top: 25%;
+    transform: translate(-50%, -50%);
+}
