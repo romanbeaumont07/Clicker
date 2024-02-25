@@ -6,7 +6,7 @@ if(ClickCount == null){
 };
 localStorage.getItem('TwoTimesUpgrade')
 var TwoTimesUpgrade = localStorage.getItem('TwoTimesUpgrade');
-if(TwoTimesUpgrade == "null") {
+if(TwoTimesUpgrade == null) {
     TwoTimesUpgrade = false;
     localStorage.setItem('TwoTimesUpgrade', TwoTimesUpgrade);
 };
