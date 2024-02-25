@@ -1,5 +1,5 @@
 localStorage.getItem('ClickCount');
-var ClickCount = localStorage.getItem('ClickCount');
+var ClickCount = Number(localStorage.getItem('ClickCount'));
 if(ClickCount == null){
     ClickCount = 0;
     localStorage.setItem('ClickCount', ClickCount);
@@ -16,7 +16,7 @@ document.getElementById("Clicker").addEventListener("click", function(){
     document.getElementById("ClickAmount").innerHTML = ClickCount;
     localStorage.setItem('ClickCount', ClickCount);
     }else {
-        ClickCount = Number(ClickCount) + 2;
+        ClickCount = ClickCount + 2;
         document.getElementById("ClickAmount").innerHTML = ClickCount;
         localStorage.setItem('ClickCount', ClickCount);
     }
