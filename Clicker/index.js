@@ -1,13 +1,16 @@
 localStorage.getItem('ClickCount');
-var ClickCount = localStorage.getItem('ClickCount')
+var ClickCount = localStorage.getItem('ClickCount');
 if(ClickCount == null){
     ClickCount = 0;
     localStorage.setItem('ClickCount', ClickCount);
-}
-var TwoTimesUpgrade = false;
-localStorage.setItem('TwoTimesUpgrade', TwoTimesUpgrade);
+};
+localStorage.getItem('TwoTimesUpgrade')
+var TwoTimesUpgrade = localStorage.getItem('TwoTimesUpgrade');
+if(TwoTimesUpgrade == null) {
+    TwoTimesUpgrade = false;
+    localStorage.setItem('TwoTimesUpgrade', TwoTimesUpgrade);
+};
 document.getElementById("Clicker").addEventListener("click", function(){
-    localStorage.getItem('TwoTimesUpgrade')
     if(TwoTimesUpgrade == false) {
     ClickCount++;
     document.getElementById("ClickAmount").innerHTML = ClickCount;
