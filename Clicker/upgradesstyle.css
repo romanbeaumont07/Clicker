@@ -15,3 +15,8 @@
 #UpgradeLabelDiv {
     text-align: center;
 }
+
+#Upgrade1:hover {
+    background-color: lightgray;
+}
+
