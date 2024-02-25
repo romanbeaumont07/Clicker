@@ -1,4 +1,5 @@
-var ClickCount
+localStorage.getItem('ClickCount');
+var ClickCount = localStorage.getItem('ClickCount')
 if(ClickCount == null){
     ClickCount = 0;
     localStorage.setItem('ClickCount', ClickCount);
