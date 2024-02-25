@@ -1,5 +1,8 @@
-var ClickCount = 0;
-localStorage.setItem('ClickCount', ClickCount);
+var ClickCount
+if(ClickCount == null){
+    ClickCount = 0;
+    localStorage.setItem('ClickCount', ClickCount);
+}
 var TwoTimesUpgrade = false;
 localStorage.setItem('TwoTimesUpgrade', TwoTimesUpgrade);
 document.getElementById("Clicker").addEventListener("click", function(){
