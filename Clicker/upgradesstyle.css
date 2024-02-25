@@ -1,0 +1,17 @@
+.UpgradesDiv {
+    position: absolute;
+}
+
+#Upgrade1 {
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    font-size: 20px;
+}
+
+#UpgradeLabel {
+    font-size: 40px;
+}
+#UpgradeLabelDiv {
+    text-align: center;
+}
