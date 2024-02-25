@@ -16,7 +16,7 @@ document.getElementById("Clicker").addEventListener("click", function(){
     document.getElementById("ClickAmount").innerHTML = ClickCount;
     localStorage.setItem('ClickCount', ClickCount);
     }else {
-        ClickCount = ClickCount + 2;
+        ClickCount = Number(ClickCount) + 2;
         document.getElementById("ClickAmount").innerHTML = ClickCount;
         localStorage.setItem('ClickCount', ClickCount);
     }
