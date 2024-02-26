@@ -1,5 +1,6 @@
 ClickCount = localStorage.getItem('ClickCount');
 TwoTimesUpgrade = localStorage.getItem('TwoTimesUpgrade');
+AutoClick = localStorage.getItem('AutoClick');
 document.getElementById("Upgrade1").addEventListener("click", function(){
     if(ClickCount >= 100){
         ClickCount -= 100;
@@ -11,5 +12,16 @@ document.getElementById("Upgrade1").addEventListener("click", function(){
     }
     else {
         window.alert("Not Enough Clicks");
+    };
+});
+document.getElementById("Upgrade2").addEventListener("click", function(){
+    if(ClickCount >= 100){
+        ClickCount -= 100;
+        AutoClick = true;
+        localStorage.setItem('ClickCount', ClickCount);
+        localStorage.setItem('AutoClick', AutoClick);
     }
-})
+    else {
+        window.alert("Not Enough Clicks")
+    };
+});

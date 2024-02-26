@@ -10,13 +10,19 @@ if(TwoTimesUpgrade == null) {
     TwoTimesUpgrade = false;
     localStorage.setItem('TwoTimesUpgrade', TwoTimesUpgrade);
 };
+localStorage.getItem('AutoClick');
+var AutoClick = localStorage.getItem('AutoClick');
+if(AutoClick == null){
+    AutoClick = false;
+    localStorage.setItem('AutoClick', AutoClick);
+}
 document.getElementById("Clicker").addEventListener("click", function(){
     if(TwoTimesUpgrade == "false") {
     ClickCount++;
     document.getElementById("ClickAmount").innerHTML = ClickCount;
     localStorage.setItem('ClickCount', ClickCount);
     }else {
-        ClickCount = ClickCount + 2;
+        ClickCount += 2;
         document.getElementById("ClickAmount").innerHTML = ClickCount;
         localStorage.setItem('ClickCount', ClickCount);
     }
@@ -24,6 +30,13 @@ document.getElementById("Clicker").addEventListener("click", function(){
 document.getElementById("UpgradesPage").addEventListener("click", function(){
     window.location.href = "upgrades.html"
 });
+if(AutoClick == "true"){
+    setInterval(()=>{
+        ClickCount++
+        document.getElementById("ClickAmount").innerHTML = ClickCount;
+    },1000);
+    localStorage.setItem('ClickCount', ClickCount);
+};
 /*document.getElementById("Upgrade1").addEventListener("click", function(){
     if(ClickCount >= 100){
         ClickCount -= 100;
